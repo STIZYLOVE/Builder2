@@ -5,30 +5,31 @@
 void CarManualBuilder::Reset()
 {
     result = new Manual();
-    result->AddRows("Характеристики автомобиля:");
+    result->AddRows("РҐР°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё Р°РІС‚РѕРјРѕР±РёР»СЏ:");
 }
 void CarManualBuilder::SetSeats(unsigned short number)
 {
-    result->AddRows("Кол-во сидений: " + to_string(number));
+    result->AddRows("РљРѕР»-РІРѕ СЃРёРґРµРЅРёР№: " + to_string(number));
 }
 void CarManualBuilder::SetEngine(Engine* engine)
 {
-    result->AddRows("Кол-во лошадиных сил: " + to_string(engine->GetHorsePowers()));
+    result->AddRows("РљРѕР»-РІРѕ Р»РѕС€Р°РґРёРЅС‹С… СЃРёР»: " + to_string(engine->GetHorsePowers()));
 }
 void CarManualBuilder::SetABS()
 {
-    result->AddRows("Наличие ABS");
+    result->AddRows("РќР°Р»РёС‡РёРµ ABS");
 }
 void CarManualBuilder::SetGPS()
 {
-    result->instructions += "Наличие GPS\n\t";
+    result->AddRows("РќР°Р»РёС‡РёРµ GPS");
 }
 void CarManualBuilder::SetWheels(unsigned short number)
 {
-    result->instructions += "Кол-во колёс: " + to_string(number) + "\n\t";
+    result->AddRows("РљРѕР»-РІРѕ РєРѕР»С‘СЃ: " + to_string(number));
 }
 Manual* CarManualBuilder::GetResult()
 {
     return result;
 }
+
 
